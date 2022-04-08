@@ -3,13 +3,13 @@ exports.sumNumberFriends = (captcha) => {
 	if (captcha.length <= 1) return sum;
 
 	const lastIndex = captcha.length - 1;
-
 	for (let i = 0; i < lastIndex; i++) {
 		if (captcha[i] === captcha[i + 1]) sum += +captcha[i];
 	}
 
 	// check closing loop digits
 	if (captcha[0] === captcha[lastIndex]) sum += +captcha[0];
+
 	return sum;
 };
 
